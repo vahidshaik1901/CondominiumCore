@@ -149,7 +149,7 @@ public:
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 4294967295 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].nValue = 1 * COIN;
-        txNew.vout[0].scriptPubKey = CScript() << ParseHex("02c546b95033d375110ee1fc8a1cab") << OP_CHECKSIG;
+        txNew.vout[0].scriptPubKey = CScript() << ParseHex("04d058b260b1e3fd965c2e89d7aeb105b65d235bb398774825016763530e37bf2c9d8647c62be5769358ccfc2d65548d4c6134374aa39627d6f16d21273aa9c4ae") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
@@ -164,7 +164,6 @@ public:
 
     	//vSeeds.push_back(CDNSSeedData("185.151.31.59", "185.151.31.59"));             // seed1
         //vSeeds.push_back(CDNSSeedData("185.151.31.59", "185.151.31.59"));             // seed2
-
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 28); // C
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 138); // x

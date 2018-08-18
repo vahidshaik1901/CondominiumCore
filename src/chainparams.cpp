@@ -159,11 +159,11 @@ public:
         genesis.nNonce = 199;
 
         hashGenesisBlock = genesis.GetHash(); //segwit 8 disable and enable
-        //assert(hashGenesisBlock == uint256("0x00000a986ce620e0161155f31fa994139af9c61b0582e1e9063f2f2a216a590f"));
-        //assert(genesis.hashMerkleRoot == uint256("0x0dc57b71f18e22298828187a808f88a3a6b107cbc17720211cdd66057e57adba"));
+        assert(hashGenesisBlock == uint256("0x71353e1c840ca15e05011b1599b951419df419dfb61e297ec5f73090d8ab0530"));
+        assert(genesis.hashMerkleRoot == uint256("0x001"));
 
-    	vSeeds.push_back(CDNSSeedData("185.151.31.59", "185.151.31.59"));             // seed1
-        vSeeds.push_back(CDNSSeedData("185.151.31.59", "185.151.31.59"));             // seed2
+    	//vSeeds.push_back(CDNSSeedData("185.151.31.59", "185.151.31.59"));             // seed1
+        //vSeeds.push_back(CDNSSeedData("185.151.31.59", "185.151.31.59"));             // seed2
 
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 28); // C

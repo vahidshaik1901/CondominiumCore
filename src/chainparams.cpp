@@ -54,30 +54,30 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x000003f46e57c04e31374710022a6685abea12cb99960dfe96eaaa430edc670f"));
+    (0, uint256("0x001"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1527974340, // * UNIX timestamp of last checkpoint block
+    0, // * UNIX timestamp of last checkpoint block
     0,    // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
-    2000        // * estimated number of transactions per day after checkpoint
+    0        // * estimated number of transactions per day after checkpoint
 };
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
     boost::assign::map_list_of(0, uint256("0x001"));
 static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
-    1740710,
     0,
-    250};
+    0,
+    0};
 
 static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
     boost::assign::map_list_of(0, uint256("0x001"));
 static const Checkpoints::CCheckpointData dataRegtest = {
     &mapCheckpointsRegtest,
-    1454124731,
     0,
-    100};
+    0,
+    0};
 
 libzerocoin::ZerocoinParams* CChainParams::Zerocoin_Params() const
 {
@@ -100,10 +100,10 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 4-byte int at any alignment.
          */
-        pchMessageStart[0] = 0xc9;
-        pchMessageStart[1] = 0xba;
-        pchMessageStart[2] = 0x8b;
-        pchMessageStart[3] = 0x38;
+        pchMessageStart[0] = 0x34;
+        pchMessageStart[1] = 0x48;
+        pchMessageStart[2] = 0x77;
+        pchMessageStart[3] = 0x69;
         vAlertPubKey = ParseHex("0370a5a13eb54a2e37bd896127737138884fcc5cf7231fdf9a0e1c5ca61f023c36");
         nDefaultPort = 33588;
         bnProofOfWorkLimit = ~uint256(0) >> 20; //20 Condominium starting difficulty is 1 / 2^12
@@ -142,7 +142,7 @@ public:
             genesis.hashMerkleRoot = 90d274dca16659997d8f5fc9644127d260087d4a39ca61ba9b3334482aa8c55d
 
          */
-        const char* pszTimestamp = "Condominium new blockchain is here";
+        const char* pszTimestamp = "Yuka is cute hihihihi";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -161,8 +161,8 @@ public:
         assert(hashGenesisBlock == uint256("0x000003f46e57c04e31374710022a6685abea12cb99960dfe96eaaa430edc670f"));
         assert(genesis.hashMerkleRoot == uint256("0x90d274dca16659997d8f5fc9644127d260087d4a39ca61ba9b3334482aa8c55d"));
 
-    		  vSeeds.push_back(CDNSSeedData("seed1.cdmcoin.org", "seed1.cdmcoin.org"));             // seed1
-          vSeeds.push_back(CDNSSeedData("seed2.cdmcoin.org", "seed2.cdmcoin.org"));             // seed2
+    	vSeeds.push_back(CDNSSeedData("185.151.31.59", "185.151.31.59"));             // seed1
+        vSeeds.push_back(CDNSSeedData("185.151.31.59", "185.151.31.59"));             // seed2
 
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 28); // C

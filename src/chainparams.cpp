@@ -57,10 +57,10 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
     (0, uint256("0x7526bb3f722ff1e7934d007044a43e1143ba10f8f71bfdf2e5ee54f4592031a5"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    0, // * UNIX timestamp of last checkpoint block
-    0,    // * total number of transactions between genesis and last checkpoint
+    1534607102, // * UNIX timestamp of last checkpoint block
+    1,    // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
-    0        // * estimated number of transactions per day after checkpoint
+    1        // * estimated number of transactions per day after checkpoint
 };
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
@@ -125,7 +125,7 @@ public:
         nModifierUpdateBlock = 999999999;
         nZerocoinStartHeight = 601;
         nAccumulatorStartHeight = 1;
-        nZerocoinStartTime = 1534582936; // 14 - apr - 2018
+        nZerocoinStartTime = 1634607102; // 14 - apr - 2018
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
         nBlockRecalculateAccumulators = ~1; //Trigger a recalculation of accumulators
         nBlockFirstFraudulent = ~1; //First block that bad serials emerged

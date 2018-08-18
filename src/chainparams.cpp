@@ -157,9 +157,9 @@ public:
         genesis.nBits = 0x1e0ffff0;
         genesis.nNonce = 236551;
 
-        hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x000003f46e57c04e31374710022a6685abea12cb99960dfe96eaaa430edc670f"));
-        assert(genesis.hashMerkleRoot == uint256("0x90d274dca16659997d8f5fc9644127d260087d4a39ca61ba9b3334482aa8c55d"));
+        hashGenesisBlock = genesis.GetHash(); //segwit 8 disable and enable
+        //assert(hashGenesisBlock == uint256("0x000003f46e57c04e31374710022a6685abea12cb99960dfe96eaaa430edc670f"));
+        //assert(genesis.hashMerkleRoot == uint256("0x90d274dca16659997d8f5fc9644127d260087d4a39ca61ba9b3334482aa8c55d"));
 
     	vSeeds.push_back(CDNSSeedData("185.151.31.59", "185.151.31.59"));             // seed1
         vSeeds.push_back(CDNSSeedData("185.151.31.59", "185.151.31.59"));             // seed2

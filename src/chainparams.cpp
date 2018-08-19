@@ -157,7 +157,7 @@ public:
         genesis.nTime = 1534607102;
         genesis.nBits = 0x1e0ffff0;
         genesis.nNonce = 199;
-
+        printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
         hashGenesisBlock = genesis.GetHash(); //segwit 8 disable and enable
         assert(hashGenesisBlock == uint256("0x0000000000000000000000000000000000000000000000000000000100010001"));
         assert(genesis.hashMerkleRoot == uint256("0x0000000000000000000000000000000000000000000000000000000100010001"));

@@ -158,6 +158,7 @@ public:
         genesis.nBits = 0x1e0ffff0;
         genesis.nNonce = 199;
         printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+	printf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot().ToString().c_str());
         hashGenesisBlock = genesis.GetHash(); //segwit 8 disable and enable
         assert(hashGenesisBlock == uint256("0x7adeed9b329e072aa4e86a2f2e7b5c3657dcd1c405991e6f9997445371a690a4"));
         assert(genesis.hashMerkleRoot == uint256("0x0000000000000000000000000000000000000000000000000000000100010001"));
